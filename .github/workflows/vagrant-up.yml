@@ -28,3 +28,15 @@ jobs:
 
       - name: list files in home
         run: find .
+
+      - name: vagrant package box
+        run: vagrant package --output out.box
+
+      - name: ls -l
+        run: ls -l out.box
+
+      - name: Save box
+        uses: actions/upload-artifact@v3
+        with:
+          name: out.box
+          path: out.box
