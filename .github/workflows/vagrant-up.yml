@@ -25,3 +25,6 @@ jobs:
 
       - name: ssh into box after boot
         run: vagrant ssh -c "echo 'hello world!'"
+
+      - name: list files in home
+        run: find -type f
