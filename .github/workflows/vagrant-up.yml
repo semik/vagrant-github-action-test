@@ -27,7 +27,7 @@ jobs:
         run: vagrant ssh -c "echo 'hello world!'"
 
       - name: list files in home
-        run: find .
+        run: find . -exec ls -l {} \;
 
       - name: vagrant package box
         run: vagrant package --output out.box
