@@ -35,6 +35,12 @@ jobs:
       - name: ls -l
         run: ls -l out.box
 
+      - name: extract box
+        run: tar xvf out.box
+
+      - name: list files in home
+        run: find . -exec ls -l {} \;
+
       - name: Save box
         uses: actions/upload-artifact@v3
         with:
